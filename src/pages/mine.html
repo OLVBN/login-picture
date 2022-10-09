@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header" class="header">
+        <div class="contant">
+            <div class="row ">
+                <div class="col-3">
+                    <div class="logo" id="logo">
+                        <img src="../images/papsi.webp" alt="" style="height: 50px;">
+                    </div>
+                </div>
+
+                <div class="offset-7 col-2 d-flex flex-row-reverse">
+                    <div class="rightPart">
+                        <div id="userInfo" class="d-flex d-none">
+                            <div class="col d-flex align-items-center justify-content-center" ><img id="headPic" src="../images/default.webp" alt="" style="border-radius: 50%; height: 50px;"></div>
+                            <div class="col d-flex align-items-center justify-content-center"><a id="username" href="/pages/mine.html">张三</a></div>
+                            <div class="col d-flex align-items-center justify-content-center"><a id="exit" href="#">退出</a></div>
+                        </div>
+                        <div class="d-flex " id="loginAndRegister">
+                            <div class="col d-flex align-items-center justify-content-center"><a id="login" href="#">登录</a></div>
+                            <div class="col d-flex align-items-center justify-content-center"><a id="regist" href="#">注册</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <!-- <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">相册管理</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link " id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                            type="button" role="tab" aria-controls="home" aria-selected="true">我的作品</button>
+                    </li> -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                            type="button" role="tab" aria-controls="contact" aria-selected="false">个人信息</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <!-- <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h5>创建相册</h5>
+                                <div>
+                                    <input type="text" id="albumInput"> <button id="albumCreateBtn">确定</button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>上传文件</h5>
+                                <div>
+                                    <select id="select">
+
+                                    </select>
+                                    <input id="file" type="file" multiple accept="image/*">
+                                    <button id="uploadBtn">上传</button>
+                                </div>
+                            </li>
+                            <li class="list-group-item">删除相册</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab">
+                        我的作品
+                    </div> -->
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <form class="mb-3">
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">用户名</label>
+                                <div class="col-sm-10">
+                                    <input type="text" readonly id="userName" class="form-control" placeholder="用户名" >
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">密码</label>
+                                <div class="col-sm-10">
+                                    <input type="password"  id="password" class="form-control" placeholder="密码">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">昵称</label>
+                                <div class="col-sm-10">
+                                    <input type="text"  id="nickname" class="form-control" placeholder="昵称">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">手机号</label>
+                                <div class="col-sm-10">
+                                    <input type="text"  id="phoneNumber" class="form-control" placeholder="输入您的手机号">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">邮箱</label>
+                                <div class="col-sm-10">
+                                    <input type="email"  id="email" class="form-control" placeholder="输入您的邮箱">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="" id="sex" class="col-sm-2 col-form-label">性别</label>
+                                <div class="col-sm-10">
+                                    <select class="form-select">
+                                        <option selected>-------</option>
+                                        <option value="男">男</option>
+                                        <option value="女">女</option>
+                                        <option value="保密">保密</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <label for="" class="col-sm-2 col-form-label">所在位置</label>
+                                <div class="col-sm-10">
+                                    <div class="d-flex">
+                                        <select  id="province" class="form-select col">
+                                            <option selected>省份</option>
+                                        </select>
+                                        <select id="city" class="form-select col">
+                                            <option selected>城市</option>
+                                        </select>
+                                        <select id="district" class="form-select col">
+                                            <option selected>县区</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label  class="form-label">个性签名</label>
+                                <textarea id="personalSign" class="form-control " placeHolder="个性签名" ></textarea>
+                            </div>
+                            <div class="mb-3 d-flex justify-content-center">
+                                <button type="button" id="btn" class="btn btn-primary">提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
